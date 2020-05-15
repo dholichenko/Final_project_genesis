@@ -12,13 +12,6 @@ import java.util.concurrent.TimeUnit;
 // реалізація інтерфейсу Interceptor
 public class HTTPLogInterceptor implements Interceptor {
 
-    // Цей клас як перехоплвальник запитів
-    // Він візьме всю інформацію, яку відправляємо та яку отримуємо, та виведе в лог нашого локального проекту. Це потрібно для зручності
-
-    // Клас Charset описує конкретне кодування
-    // Оголошення константи UTF8 класу Charset - объект набора символов для именованного набора символов.
-    // "UTF-8" - імя кодування
-    // Кодуванням називається набір символів і відповідний їм набір кодів
     private static final Charset UTF8 = Charset.forName("UTF-8");
 
     // ініціалізація перечислення Level
@@ -40,14 +33,10 @@ public class HTTPLogInterceptor implements Interceptor {
 
         //
         Logger DEFAULT = new Logger() {
-            // Створення екземпляру logText класу StringBuilder - цей клас для створення рядка, який модифікується
-            // Створено обєкт logText без параметрів, при цьому в ньому зарезервовано місце для розміщення 16 символів
+
             public StringBuilder logText = new StringBuilder();
 
-            // Анотація @Override, означає, що збираємось перевизначити метод батьківського класу.
-            // Метод log
-            // Якщо logText пустий, то створюємо екземпляр класу StringBuilder, в іншому випадку - додаємо (конкатенуємо) до нього параметр message
-            @Override
+                  @Override
             public void log(String message) {
                 if (logText == null) {
                     logText = new StringBuilder();
@@ -55,10 +44,7 @@ public class HTTPLogInterceptor implements Interceptor {
                 logText.append(message).append("\n");
             }
 
-            // Анотація @Override, означає, що збираємось перевизначити метод батьківського класу.
-            // Метод getData
-            // ініціалізація змінної text - logText перетворюємо з обєкту StringBuilder в строку
-            // очищення обєкту logText класу StringBuilder та повернення змінної text
+
             @Override
             public String getData() {
                 String text = logText.toString();

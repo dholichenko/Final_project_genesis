@@ -10,17 +10,14 @@ public class Field extends Element {
         super(by);
     }
 
-    // заповнення sendKeys
     public void sendKeys(String text){
         compose().sendKeys(text);
     }
 
-    // виконання затирання текстового поля
     public void clear(){
         compose().clear();
     }
 
-    // зчитування тексту
     public String getText(){
         return String.valueOf(compose().getText());
     }

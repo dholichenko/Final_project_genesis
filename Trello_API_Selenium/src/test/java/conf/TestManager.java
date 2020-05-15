@@ -10,23 +10,19 @@ import java.util.concurrent.TimeUnit;
 
 public class TestManager {
 
-    // ініціалізація драйверу
-    // винесли з методу setUp, тому що невидно в методі openHomePage (область вдимости)
+
     protected static WebDriver driver;
     protected static WebDriverWait wait;
 
     @BeforeClass
-    // містяться попередні налаштування
-    // метод повинен бути static так як неповинні залежати від будь-чого
+
     public static void setUp(){
-        // Webdriver - набір бібліотек, який доволяє керувати браузеров з програми
-        // Перед ініціалізацією драйвера необхідно прописати шлях на сам драйвер - за допомогою setProperty. Необхідно додати chromedriver.exe в систему
+
         System.setProperty("webdriver.chrome.driver", "./src/main/resources/chromedriver.exe");
 
         // ініціалізація драйверу
         driver = new ChromeDriver();
 
-        // вікно браузеру розширення на весь екран
         driver.manage().window().maximize();
 
         // Явні та неявні очікування (explicit/implicit waits)
@@ -41,11 +37,9 @@ public class TestManager {
 
     @AfterClass
     public static void tearDown(){
-        // закриття вікна браузера
         driver.quit();
     }
 
-    // гетер, який буде повертати драйвер
     public static WebDriver getDriver(){
         return driver;
     }
