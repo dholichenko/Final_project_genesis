@@ -1,152 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7513528d-6f05-4d37-935f-34e990e536dd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Trello_API_Selenium.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Checklist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Checklist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HTTPLogInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HTTPLogInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/List.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/List.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RetrofitBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RetrofitBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TrelloApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TrelloApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CopyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CopyList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CreateChecklist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CreateChecklist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/DeleteBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DeleteBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TrelloTestAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TrelloTestAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TrelloTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/conf/TestManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/conf/TestManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/elements/Container.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/elements/Container.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/elements/Element.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/elements/Element.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/elements/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/elements/Field.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Board.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Card.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Checklist.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Checklist.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/HTTPLogInterceptor$Level.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/HTTPLogInterceptor$Level.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/HTTPLogInterceptor$Logger$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/HTTPLogInterceptor$Logger$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/HTTPLogInterceptor$Logger.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/HTTPLogInterceptor$Logger.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/HTTPLogInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/HTTPLogInterceptor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/List.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/List.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RetrofitBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RetrofitBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/CopyList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/CopyList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/CreateChecklist.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/CreateChecklist.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/DeleteBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/DeleteBoard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TrelloTestAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TrelloTestAPI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TrelloTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/conf/TestManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/conf/TestManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/elements/Container.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/elements/Container.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/elements/Element.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/elements/Element.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/elements/Field.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/elements/Field.class" afterDir="false" />
-    </list>
+    <list default="true" id="1efea597-2355-4a2e-ab89-30fdd9b95244" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="206" />
+  </component>
   <component name="ExportTestResults" outputFolder="$PROJECT_DIR$" userTempatePath="" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
-  <component name="ProjectId" id="1bpT5PjTbTEZ7cVeUXMNZJ2POLs" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1bwxvhCmpnL47oUTpZnPcsgIDKy" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources" />
-      <recent name="C:\Users\Lorel\OneDrive\Робочий стіл\TrelloTest1\TrelloTest1\src\main\resources" />
-      <recent name="C:\Users\User\IdeaProjects\TrelloTest1\src\test" />
-      <recent name="C:\Users\User\IdeaProjects\TrelloTest1\src\main\resources" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="conf" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Lorel\OneDrive\Робочий стіл\TrelloTest1\TrelloTest1\src\main\resources" />
-    </key>
-  </component>
-  <component name="RunManager" selected="TestNG.&lt;default&gt; (1)">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="TrelloTest_UP" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="TrelloTest_UP" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CopyList" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Final" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CopyList" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.&lt;default&gt; (3)">
     <configuration name="CreateChecklist" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Final" />
+      <module name="FinalProject" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CreateChecklist" />
       <option name="TEST_OBJECT" value="CLASS" />
@@ -156,19 +54,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeleteBoard" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Final" />
+    <configuration name="&lt;default&gt; (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="FinalProject" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="DeleteBoard" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="TEST_OBJECT" value="PACKAGE" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="&lt;default&gt; (1)" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Trello_API_Selenium" />
+    <configuration name="&lt;default&gt; (2)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="FinalProject" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="PACKAGE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="&lt;default&gt; (3)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="FinalProject" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="PACKAGE" />
       <properties />
@@ -178,7 +85,7 @@
       </method>
     </configuration>
     <configuration name="&lt;default&gt;" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Final" />
+      <module name="FinalProject" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="PACKAGE" />
       <properties />
@@ -189,11 +96,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.&lt;default&gt; (3)" />
+        <item itemvalue="TestNG.&lt;default&gt; (2)" />
         <item itemvalue="TestNG.&lt;default&gt; (1)" />
         <item itemvalue="TestNG.&lt;default&gt;" />
-        <item itemvalue="TestNG.DeleteBoard" />
         <item itemvalue="TestNG.CreateChecklist" />
-        <item itemvalue="TestNG.CopyList" />
       </list>
     </recent_temporary>
   </component>
@@ -202,133 +109,79 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7513528d-6f05-4d37-935f-34e990e536dd" name="Default Changelist" comment="" />
-      <created>1589327851688</created>
+      <changelist id="1efea597-2355-4a2e-ab89-30fdd9b95244" name="Default Changelist" comment="" />
+      <created>1589557189049</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1589327851688</updated>
-      <workItem from="1589327853700" duration="11280000" />
-      <workItem from="1589359928142" duration="2446000" />
-      <workItem from="1589362426911" duration="8140000" />
-      <workItem from="1589373195040" duration="11484000" />
-      <workItem from="1589388010644" duration="8444000" />
-      <workItem from="1589401210136" duration="14233000" />
-      <workItem from="1589446186279" duration="7077000" />
-      <workItem from="1589456320132" duration="6187000" />
-      <workItem from="1589469260865" duration="17621000" />
-      <workItem from="1589493151407" duration="12258000" />
-      <workItem from="1589531931150" duration="185000" />
-      <workItem from="1589532137810" duration="1790000" />
-      <workItem from="1589533953387" duration="1791000" />
-      <workItem from="1589535794763" duration="1352000" />
-      <workItem from="1589540752897" duration="1795000" />
-      <workItem from="1589542564362" duration="300000" />
-      <workItem from="1589545662542" duration="857000" />
-      <workItem from="1589546637672" duration="1770000" />
-      <workItem from="1589548834857" duration="597000" />
-      <workItem from="1589559801328" duration="143000" />
-      <workItem from="1589560391195" duration="102000" />
-      <workItem from="1589575760583" duration="673000" />
-      <workItem from="1589577028381" duration="1020000" />
+      <updated>1589557189049</updated>
+      <workItem from="1589577635572" duration="1350000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="464" y="135" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1589541867357">
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1589568830066">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="413" y="119" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1589471171327" />
-    <state x="464" y="135" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1589541867357" />
-    <state x="413" y="143" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1589470970287">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="413" y="143" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1589470970287" />
-    <state x="479" y="223" width="408" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1589470975171">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="479" y="223" width="408" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1589470975171" />
-    <state x="413" y="222" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589362511449">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="413" y="222" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1589362511449" />
-    <state width="506" height="466" key="DebuggerActiveHint" timestamp="1589503496641">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="506" height="466" key="DebuggerActiveHint/0.0.1366.728@0.0.1366.728" timestamp="1589503496641" />
-    <state x="521" y="135" key="FileChooserDialogImpl" timestamp="1589559941908">
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1589568830066" />
+    <state x="466" y="96" key="#com.intellij.refactoring.encapsulateFields.EncalpsulateFieldsDialog" timestamp="1589577168671">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1589481143869" />
-    <state x="521" y="135" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1589559941908" />
-    <state width="1478" height="584" key="GridCell.Tab.0.bottom" timestamp="1589578032207">
+    <state x="466" y="96" key="#com.intellij.refactoring.encapsulateFields.EncalpsulateFieldsDialog/0.0.1536.824@0.0.1536.824" timestamp="1589577168671" />
+    <state x="566" y="272" width="403" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1589566704040">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1323" height="467" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589549439271" />
-    <state width="1478" height="584" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589578032207" />
-    <state width="1638" height="503" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1589544905012" />
-    <state width="1478" height="584" key="GridCell.Tab.0.center" timestamp="1589578032207">
+    <state x="566" y="272" width="403" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1589566704040" />
+    <state x="213" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1589566853239">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1323" height="467" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589549439271" />
-    <state width="1478" height="584" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589578032207" />
-    <state width="1638" height="503" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1589544905011" />
-    <state width="1478" height="584" key="GridCell.Tab.0.left" timestamp="1589578032207">
+    <state x="213" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1589566853239" />
+    <state x="577" y="154" key="FileChooserDialogImpl" timestamp="1589558110006">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1323" height="467" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589549439271" />
-    <state width="1478" height="584" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589578032207" />
-    <state width="1638" height="503" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1589544905010" />
-    <state width="1478" height="584" key="GridCell.Tab.0.right" timestamp="1589578032207">
+    <state x="577" y="154" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1589558110006" />
+    <state width="1323" height="293" key="GridCell.Tab.0.bottom" timestamp="1589578988450">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="293" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589578988450" />
+    <state width="746" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589577304384" />
+    <state width="1323" height="293" key="GridCell.Tab.0.center" timestamp="1589578988449">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="293" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589578988449" />
+    <state width="746" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589577304383" />
+    <state width="1323" height="293" key="GridCell.Tab.0.left" timestamp="1589578988449">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="293" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589578988449" />
+    <state width="746" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589577304383" />
+    <state width="1323" height="293" key="GridCell.Tab.0.right" timestamp="1589578988449">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="293" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589578988449" />
+    <state width="746" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589577304383" />
+    <state x="277" y="0" key="SettingsEditor" timestamp="1589560323249">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1323" height="467" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589549439271" />
-    <state width="1478" height="584" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589578032207" />
-    <state width="1638" height="503" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1589544905012" />
-    <state width="1323" height="2" key="GridCell.Tab.1.bottom" timestamp="1589547365502">
+    <state x="277" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1589560323249" />
+    <state x="528" y="212" key="export.test.results" timestamp="1589578982488">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="2" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589547365502" />
-    <state width="1638" height="265" key="GridCell.Tab.1.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1589544697485" />
-    <state width="1323" height="2" key="GridCell.Tab.1.center" timestamp="1589547365501">
+    <state x="528" y="212" key="export.test.results/0.0.1366.728@0.0.1366.728" timestamp="1589578982488" />
+    <state x="594" y="240" key="export.test.results/0.0.1536.824@0.0.1536.824" timestamp="1589577429520" />
+    <state x="378" y="165" key="run.anything.popup" timestamp="1589578792953">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="2" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1589547365501" />
-    <state width="1638" height="265" key="GridCell.Tab.1.center/0.0.1680.1050@0.0.1680.1050" timestamp="1589544697484" />
-    <state width="1323" height="2" key="GridCell.Tab.1.left" timestamp="1589547365501">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="378" y="165" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1589578792953" />
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1589567732145" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1589576410289">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1323" height="2" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1589547365501" />
-    <state width="1638" height="265" key="GridCell.Tab.1.left/0.0.1680.1050@0.0.1680.1050" timestamp="1589544697484" />
-    <state width="1323" height="2" key="GridCell.Tab.1.right" timestamp="1589547365501">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="2" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1589547365501" />
-    <state width="1638" height="265" key="GridCell.Tab.1.right/0.0.1680.1050@0.0.1680.1050" timestamp="1589544697485" />
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1589549055581">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1589549055581" />
-    <state x="0" y="67" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1589362885196">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="0" y="67" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728@0.0.1366.728" timestamp="1589362885196" />
-    <state x="502" y="191" key="export.test.results" timestamp="1589494994913">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="502" y="191" key="export.test.results/0.0.1366.728@0.0.1366.728" timestamp="1589494994913" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1589502789258">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1589502789258" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1589547001897">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1589547001897" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1589576410289" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/TrelloTest1$_default___1_.ic" NAME="&lt;default&gt; (1) Coverage Results" MODIFIED="1589493450043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/TrelloTest1$All_in_FinalProject.ic" NAME="All in FinalProject Coverage Results" MODIFIED="1589560388771" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

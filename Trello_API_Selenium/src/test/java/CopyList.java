@@ -1,15 +1,14 @@
 import conf.TestManager;
-import org.openqa.selenium.By;
+import conf.TrelloCredentials;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.BoardPage;
 import pages.BoardsPage;
 import pages.HomePage;
 import pages.LoginPage;
 
 import java.io.IOException;
-
 
 public class CopyList extends TestManager {
 // змінні ідентифікатори, які отримуємо після створення сутності
@@ -17,10 +16,12 @@ public class CopyList extends TestManager {
     private String  idList;
     private String  idCard;
 
-    private String  urlBoard;
+    private String boardName;
+    private String listName;
 
     // Створення дошки
     public void checkCreateBoard() throws IOException {
+        // щоб змогли відправляти запити, створюємо екземпляру класу RetrofitBuilder
         RetrofitBuilder retrofitBuilder = new RetrofitBuilder();
 
         Board board = new Board();
@@ -31,14 +32,18 @@ public class CopyList extends TestManager {
 
         idBoard = createdBoard.getId();
 
-        urlBoard = createdBoard.getUrl();
+        boardName = createdBoard.getName();
 
+        // Перевірка: перевірка імені - чи створилась дошка з зазначеним іменем
+        // Зі створеної дошки отримуємо імя за допомогою createdBoard.getName() та порівнюємо зі змінною name
         Assert.assertEquals(createdBoard.getName(), name);
     }
 
     // Створення листа в дошці
     public void classCreateList() throws IOException {
+        // щоб змогли відправляти запити, створюємо екземпляру класу RetrofitBuilder
         RetrofitBuilder retrofitBuilder = new RetrofitBuilder();
+
         List list = new List();
         String name = "New list " + System.currentTimeMillis();
 
@@ -48,14 +53,20 @@ public class CopyList extends TestManager {
 
         idList = createdList.getListId();
 
+        listName = createdList.getName();
+
+        // Перевірка: перевірка імені - чи створився лист з зазначеним іменем
+        // Зі створеного листа отримуємо імя за допомогою createdList.getName() та порівнюємо зі змінною name
         Assert.assertEquals(createdList.getName(), name);
     }
 
     // Створення картки в листі
     public void classCreateCard() throws IOException {
+        // щоб змогли відправляти запити, створюємо екземпляру класу RetrofitBuilder
         RetrofitBuilder retrofitBuilder = new RetrofitBuilder();
+
         Card card = new Card();
-        String name = "New card" + System.currentTimeMillis(); // Назва картки
+        String name = "New card" + System.currentTimeMillis();
 
         Card createdCard =
                 retrofitBuilder.getTrelloApi()
@@ -63,61 +74,58 @@ public class CopyList extends TestManager {
 
         idCard = createdCard.getCardId();
 
+        // Перевірка: перевірка імені - чи створилась картка з зазначеним іменем
+        // Зі створеної картки отримуємо імя за допомогою createdCard.getName() та порівнюємо зі змінною name
         Assert.assertEquals(createdCard.getName(), name);
-    }
-
-    // 6. Видалення дошки
-    public void classDeleteBoard() throws IOException {
-        RetrofitBuilder retrofitBuilder = new RetrofitBuilder();
-        Board board = new Board();
-
-        int code =
-                retrofitBuilder.getTrelloApi()
-                        .deleteBoard(idBoard, board.getKey(), board.getToken()).execute().code();
-
-        Assert.assertEquals(code, 200);
     }
 
     @Test
     public void copyListSelenium() throws IOException {
+
         HomePage homePage = new HomePage(driver);
+        // Перехід на сторінку
         homePage.openPage(homePage.url);
 
+        // Клік на "Вхід": знайти елемент та клікнути на нього
         homePage.loginLink.click();
 
+        // Заповнення полів "Електронна пошта" та "Пароль": знайти елемент, очистити його та ввести текст
+        // Після введення емейлу та пароля клік ENTER
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.emailField.clear();
-        loginPage.emailField.sendKeys("projectqaschool@gmail.com");
+        loginPage.enterCredentials(TrelloCredentials.email, TrelloCredentials.password);
 
-        loginPage.passwordField.clear();
-        loginPage.passwordField.sendKeys("projectschool3" + Keys.ENTER);
-
-        if(!driver.findElement(By.cssSelector("div.home-sticky-container")).isEnabled()) {
-            System.out.println("не залогинились");
-        }
-
-        BoardsPage boardsPage = new BoardsPage(driver);
-
+        // створення нової дошки
         checkCreateBoard();
 
-        boardsPage.openPage(urlBoard);
-
-
+        // створення листа в дошці
         classCreateList();
+
+        // створення 2х карток в листі
         for(int i = 1; i <= 2; i++){
             classCreateCard();
         }
 
-        // натиснення ... першого листа зліва
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#board > div:nth-child(1)>div.list.js-list-content>div.list-header.js-list-header.u-clearfix.is-menu-shown>div.list-header-extras"))).click();
-        //boardsPage.listMenuShown.click();
+        // створення екземпляру класу BoardsPage
+        BoardsPage boardsPage = new BoardsPage(driver);
 
-        boardsPage.copyList.click();
+        //boardsPage.closePopup();
+        boardsPage.getBoardCardByName(boardName).click();
 
-        boardsPage.createList.click();
+        // створення екземпляру класу BoardPage
+        BoardPage boardPage = new BoardPage(driver);
 
-        Assert.assertTrue((boardsPage.listNameCreated.getText()).equals(boardsPage.listNameCopied.getText()));
+        // натиснення
+        boardPage.getListMenuByName(listName).click();
 
-        classDeleteBoard();
+        // копіювати список
+        boardPage.getCopyList().click();
+
+        // клік на кнопку створити список
+        String newListName = "List Copy";
+        boardPage.newListInput.sendKeys(newListName + Keys.ENTER);
+
+        // перевірка
+        Assert.assertTrue(boardPage.getListByTitle(newListName).isExist());
+
     }
 }

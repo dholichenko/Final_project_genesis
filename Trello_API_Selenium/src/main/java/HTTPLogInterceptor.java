@@ -8,9 +8,10 @@ import java.nio.charset.Charset;
 import java.nio.charset.UnsupportedCharsetException;
 import java.util.concurrent.TimeUnit;
 
-// implements означає, що використовуються елементи інтерфейса в класі
-// реалізація інтерфейсу Interceptor
+
 public class HTTPLogInterceptor implements Interceptor {
+
+    // Цей клас як перехоплвальник запитів
 
     private static final Charset UTF8 = Charset.forName("UTF-8");
 
@@ -22,13 +23,10 @@ public class HTTPLogInterceptor implements Interceptor {
         BODY
     }
 
-    // інтерфейс Logger
     public interface Logger {
 
-        // виклик методу log з вхідним параметром типу String
         void log(String message);
 
-        // виклик методу getData
         String getData();
 
         //
@@ -36,14 +34,13 @@ public class HTTPLogInterceptor implements Interceptor {
 
             public StringBuilder logText = new StringBuilder();
 
-                  @Override
+            @Override
             public void log(String message) {
                 if (logText == null) {
                     logText = new StringBuilder();
                 }
                 logText.append(message).append("\n");
             }
-
 
             @Override
             public String getData() {

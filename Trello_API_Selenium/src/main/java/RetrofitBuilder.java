@@ -4,15 +4,14 @@ import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-
 public class RetrofitBuilder {
+    // Клас, який білдить запити. Це АПІ білдер з використанням ретрофіту.
 
     private TrelloApi trelloApi;
 
     public RetrofitBuilder(){
-
+        // Блок створення екземпляру gson бібліотеки Gson
         Gson gson = new GsonBuilder().create();
-
 
         // Створення екземпляру класу HTTPLogInterceptor
         HTTPLogInterceptor interceptor = new HTTPLogInterceptor();
@@ -23,18 +22,16 @@ public class RetrofitBuilder {
                 .addInterceptor(interceptor)
                 .build();
 
-
+        // Створення екземпляру класу Retrofit
         Retrofit retrofit = new Retrofit.Builder()
                 .client(client)
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .baseUrl("https://api.trello.com")
                 .build();
 
-        // В цьому ж конструкторі виконаємо ініціалізацію змінної trelloApi ретрофітом, так щоб ретрофіт виконував всі запити з цього класу
         trelloApi = retrofit.create(TrelloApi.class);
     }
 
-    // створення гетера, який поверне екземпляр TrelloApi
     public TrelloApi getTrelloApi() {
         return trelloApi;
     }

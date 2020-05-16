@@ -5,12 +5,10 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import java.util.List;
-
 import static conf.TestManager.getDriver;
 
-
 public abstract class Element {
+
     protected By by;
     protected WebDriver driver = getDriver();
 
@@ -18,21 +16,16 @@ public abstract class Element {
         this.by = by;
     }
 
-
     WebElement compose(){
         return driver.findElement(by);
     }
-
-//    List composeElements(){
-//        List<WebElement> elements = driver.findElements(by);
-//        return elements;
-//    }
 
     public void click(){
         compose().click();
     }
 
     public boolean isExist(){
+        // якщо не знайде елемент, то буде exception. тому обробляємо це за допомогою try catch
         try {
             compose();
             return true;
@@ -45,5 +38,9 @@ public abstract class Element {
         }
 
 
+    }
+
+    public By getSelector() {
+        return by;
     }
 }

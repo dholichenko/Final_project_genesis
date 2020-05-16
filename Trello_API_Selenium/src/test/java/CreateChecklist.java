@@ -1,42 +1,45 @@
 import conf.TestManager;
-import org.openqa.selenium.By;
+import conf.TrelloCredentials;
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.BoardsPage;
-import pages.ChecklistPage;
-import pages.HomePage;
-import pages.LoginPage;
+import pages.*;
 
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
 
 public class CreateChecklist extends TestManager {
+        // змінні ідентифікатори, які отримуємо після створення сутності
         private String  idBoard;
         private String  idList;
 
-        private String  urlCard;
-        private String  checklistName;
+        private String boardName;
 
     // Створення дошки
     public void checkCreateBoard() throws IOException {
+
         RetrofitBuilder retrofitBuilder = new RetrofitBuilder();
 
         Board board = new Board();
-        String name = "Board CreateChecklist " + System.currentTimeMillis(); // Назва дошки
+        String name = "Board CreateChecklist " + System.currentTimeMillis();
 
         Board createdBoard =
                 retrofitBuilder.getTrelloApi().createBoard(board, name).execute().body();
 
+        // ініціалізація змінної idBoard
         idBoard = createdBoard.getId();
 
+        boardName = createdBoard.getName();
 
+        // Перевірка: перевірка імені - чи створилась дошка з зазначеним іменем
+        // Зі створеної дошки отримуємо імя за допомогою createdBoard.getName() та порівнюємо зі змінною name
         Assert.assertEquals(createdBoard.getName(), name);
     }
 
     // Створення листа в дошці
     public void classCreateList() throws IOException {
+        // щоб змогли відправляти запити, створюємо екземпляру класу RetrofitBuilder
         RetrofitBuilder retrofitBuilder = new RetrofitBuilder();
+
         List list = new List();
         String name = "New list " + System.currentTimeMillis();
 
@@ -46,75 +49,66 @@ public class CreateChecklist extends TestManager {
 
         idList = createdList.getListId();
 
+        // Перевірка: перевірка імені - чи створився лист з зазначеним іменем
+        // Зі створеного листа отримуємо імя за допомогою createdList.getName() та порівнюємо зі змінною name
         Assert.assertEquals(createdList.getName(), name);
     }
 
     // Створення картки в листі
     public void classCreateCard() throws IOException {
+        // щоб змогли відправляти запити, створюємо екземпляру класу RetrofitBuilder
         RetrofitBuilder retrofitBuilder = new RetrofitBuilder();
+
         Card card = new Card();
-        String name = "New card" + System.currentTimeMillis(); // Назва картки
+        String name = "New card" + System.currentTimeMillis();
 
         Card createdCard =
                 retrofitBuilder.getTrelloApi()
                         .createCard(card, idList, name).execute().body();
 
-        urlCard = createdCard.getUrl();
-
+        // Перевірка: перевірка імені - чи створилась картка з зазначеним іменем
+        // Зі створеної картки отримуємо імя за допомогою createdCard.getName() та порівнюємо зі змінною name
         Assert.assertEquals(createdCard.getName(), name);
-    }
-
-    // 6. Видалення дошки
-    public void classDeleteBoard() throws IOException {
-        RetrofitBuilder retrofitBuilder = new RetrofitBuilder();
-        Board board = new Board();
-
-        int code =
-                retrofitBuilder.getTrelloApi()
-                        .deleteBoard(idBoard, board.getKey(), board.getToken()).execute().code();
-
-        Assert.assertEquals(code, 200);
     }
 
     @Test
     public void createCheklistSelenium() throws IOException {
 
-        HomePage homePage = new HomePage(driver);
-        homePage.openPage(homePage.url);
-
-        homePage.loginLink.click();
-
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.emailField.clear();
-        loginPage.emailField.sendKeys("projectqaschool@gmail.com");
-
-        loginPage.passwordField.clear();
-        loginPage.passwordField.sendKeys("projectschool3" + Keys.ENTER);
-
-        BoardsPage boardsPage = new BoardsPage(driver);
-
-        if(!driver.findElement(By.cssSelector("div.home-sticky-container")).isEnabled()) {
-            System.out.println("не залогинились");
-        }
-
+        // створення нової дошки
         checkCreateBoard();
+        // створення листа в дошці
         classCreateList();
+        // створення картки в листі
         classCreateCard();
 
-        boardsPage.openPage(urlCard);
+        HomePage homePage = new HomePage(driver);
+        // Перехід на сторінку
+        homePage.openPage(homePage.url);
 
-        ChecklistPage checklistPage = new ChecklistPage(driver);
+        // Клік на "Вхід": знайти елемент та клікнути на нього
+        homePage.loginLink.click();
 
-        //driver.findElement(By.cssSelector("a[class='button-link js-add-checklist-menu']")).click();
-        checklistPage.addChecklist.click();
+        // Заповнення полів "Електронна пошта" та "Пароль": знайти елемент, очистити його та ввести текст
+        // Після введення емейлу та пароля клік ENTER
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.enterCredentials(TrelloCredentials.email, TrelloCredentials.password);
 
-        checklistName = "New checklist " + System.currentTimeMillis();
-        checklistPage.checklistField.sendKeys(checklistName + Keys.ENTER);
+        // створення екземпляру класу BoardsPage
+        BoardsPage boardsPage = new BoardsPage(driver);
 
-        Assert.assertTrue(checklistPage.checklistEx.getText().equals(checklistName));
-        //Assert.assertTrue(checklistPage.checklistEx.composeLast().getText().equals(checklistName));
+        boardsPage.getBoardCardByName(boardName).click();
 
-        classDeleteBoard();
+        // створення екземпляру класу BoardPage
+        BoardPage boardPage = new BoardPage(driver);
+
+        boardPage.getListCard().click();
+        boardPage.getAddChecklistButton().click();
+        boardPage.checklistInput.sendKeys("Autotest" + Keys.ENTER);
+        boardPage.checklistItemInput.sendKeys("Checklist item"+ Keys.ENTER);
+        boardPage.checklistCloseButton.click();
+
+        Assert.assertTrue(boardPage.getChecklistIcon().isExist());
+
     }
 
 }
